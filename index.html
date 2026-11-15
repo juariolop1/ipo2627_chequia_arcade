@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade: Space Defender</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/model.js"></script>
+    <script defer src="js/view.js"></script>
+    <script defer src="js/controller.js"></script>
+</head>
+<body>
+    <header class="game-header">
+        <h1>Space Defender</h1>
+        <nav class="controls">
+            <!-- Botón único de control -->
+            <button id="btn-control" class="btn btn-control" aria-label="Iniciar">&#9654;</button>
+            <button id="btn-help" class="btn btn-help" data-tooltip="Ver reglas del juego">?</button>
+        </nav>
+    </header>
+
+    <main class="game-container">
+        <div class="hud">
+            <span id="score">Puntos: 0</span>
+            <span id="lives">Vidas: 3</span>
+        </div>
+        <canvas id="game-canvas"></canvas>
+    </main>
+
+    <aside id="help-panel" class="help-panel hidden">
+        <h2>Reglas del Juego</h2>
+        <p>Usa las flechas izquierda y derecha para moverte. Pulsa espacio para disparar.</p>
+        <p>Destruye a todos los invasores antes de que lleguen a la base.</p>
+        <button id="btn-close-help">Cerrar</button>
+    </aside>
+</body>
+</html>
